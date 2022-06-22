@@ -14,8 +14,8 @@ def text_progres(index,max):
 		index_make = 1
 		make_text += '\n['
 		while(index_make<21):
-			if porcent >= index_make * 5: make_text+='●'
-			else: make_text+='○'
+			if porcent >= index_make * 5: make_text+='█'
+			else: make_text+='░'
 			index_make+=1
 		make_text += ']\n'
 		return make_text
