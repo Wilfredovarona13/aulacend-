@@ -52,7 +52,7 @@ def createUploading(filename,totalBits,currentBits,speed,time,originalname=''):
     msg = '🛸 Subiendo a la Nube🌩...\n\n'
     msg+= '📦 Archivo : ' + str(filename)+'\n'
     if originalname!='':
-        
+        msg+= ''+'\n'
         msg = str(msg).replace(filename,originalname)
         msg+= '⏫Subiendo: ' + str(filename)+'\n'
 
