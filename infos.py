@@ -29,13 +29,15 @@ def porcent(index,max):
     return porcent
 
 def createDownloading(filename,totalBits,currentBits,speed,time,tid=''):
-    msg = '📥Descargando... \n\n'
-    msg+= '🔖Nombre: ' + str(filename)+'\n'
-    msg+= '🗂Tamaño Total: ' + str(sizeof_fmt(totalBits))+'\n'
-    msg+= '🗂Descargado: ' + str(sizeof_fmt(currentBits))+'\n'
-    msg+= '📶Velocidad: ' + str(sizeof_fmt(speed))+'/s\n'
-    msg+= '🕐Tiempo: ' + str(datetime.timedelta(seconds=int(time))) +'\n\n'
-
+    msg = '🛸Descargando🌩... \n\n'
+    msg+= '📦Nombre: ' + str(filename)+'\n'
+    
+    msg+= '├🚥 Descargado: ' + str(sizeof_fmt(currentBits))+'\n' msg+= '📦Tamaño Total: ' + str(sizeof_fmt(totalBits))+'\n'
+    
+    msg+= '├🚀Velocidad: ' + str(sizeof_fmt(speed))+'/s\n'
+    msg+= '|
+    msg+= '├⏳Tiempo: ' + str(datetime.timedelta(seconds=int(time))) +'\n\n'
+    msg+= '╰─── @yunior132001
     msg = '📡 Descargando Archivo....\n\n'
     msg += '➤ Archivo: '+filename+'\n'
     msg += text_progres(currentBits,totalBits)+'\n'
@@ -49,16 +51,18 @@ def createDownloading(filename,totalBits,currentBits,speed,time,tid=''):
         msg+= '/cancel_' + tid
     return msg
 def createUploading(filename,totalBits,currentBits,speed,time,originalname=''):
-    msg = '⏫Subiendo A La Nube☁... \n\n'
-    msg+= '🔖Nombre: ' + str(filename)+'\n'
+    msg = '🛸Subiendo A La Nube🌩... \n\n'
+    msg+= '📦Nombre: ' + str(filename)+'\n'
     if originalname!='':
         msg = str(msg).replace(filename,originalname)
-        msg+= '⏫Subiendo: ' + str(filename)+'\n'
-    msg+= '🗂Tamaño Total: ' + str(sizeof_fmt(totalBits))+'\n'
-    msg+= '🗂Subido: ' + str(sizeof_fmt(currentBits))+'\n'
-    msg+= '📶Velocidad: ' + str(sizeof_fmt(speed))+'/s\n'
-    msg+= '🕐Tiempo: ' + str(datetime.timedelta(seconds=int(time))) +'\n'
-
+        msg+= 'Subiendo: ' + str(filename)+'\n'
+    
+    msg+= '🚥 Subido: ' + str(sizeof_fmt(currentBits))+'\n' msg+= '📦Tamaño Total: ' + str(sizeof_fmt(totalBits))+'\n'
+    
+    msg+= '├🚀 Velocidad: ' + str(sizeof_fmt(speed))+'/s\n'
+    msg+= '|
+    msg+= '├⏳ Tiempo: ' + str(datetime.timedelta(seconds=int(time))) +'\n'
+    msg+= '╰─── @yunior132001
     msg = '⏫ Subiendo A La Nube☁...\n\n'
     msg += '➤ Nombre: '+filename+'\n'
     if originalname!='':
