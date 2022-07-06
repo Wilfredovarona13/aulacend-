@@ -52,14 +52,14 @@ def createUploading(filename,totalBits,currentBits,speed,time,originalname=''):
     msg = '🛸 Subiendo a la Nube🌩...\n\n'
     msg+= '📦 Archivo : ' + str(filename)+'\n'
     if originalname!='':
-        msg+= ''+'\n'
+        
         msg = str(msg).replace(filename,originalname)
         msg+= '⏫Subiendo: ' + str(filename)+'\n'
 
     msg+= '├🚥 Subido: ' + str(sizeof_fmt(currentBits))+'|'+'📦 Total: ' + str(sizeof_fmt(totalBits))+'\n'
     msg+= ''+'\n'
     msg+= '├🚀 Velocidad: ' + str(sizeof_fmt(speed))+'/s\n'
-    msg+= '|'+'\n'
+    msg+= '│'+'\n'
     msg+= '├⏳ Tiempo Restante: ' + str(datetime.timedelta(seconds=int(time))) +'\n'
     msg+= '╰─── @yunior132001'    
 
